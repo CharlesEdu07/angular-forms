@@ -11,5 +11,6 @@ export class AppComponent {
 
   save(form: NgForm) {
     console.log(form);
+    console.log(form.value.name);
   }
 }
