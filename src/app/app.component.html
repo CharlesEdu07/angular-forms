@@ -1,11 +1,12 @@
 <div class="container">
 
   {{ customer | json }}
+  {{ userForm.valid }}
 
   <form #userForm="ngForm" (ngSubmit)="save(userForm)">
     <div class="form-group">
       <label for="name" class="form-control-label">Nome</label>
-      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.name">
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.name" required>
     </div>
 
     <div class="form-group">
@@ -14,9 +15,9 @@
     </div>
 
     <div class="form-group">
-      <label for="occupation" class="form-control-label">Profissão</label>
-      <select id="occupation" class="form-control" name="occupation" [(ngModel)]="customer.occupation">
-        <option value="">Salecione</option>
+      <label class="form-control-label">Profissão</label>
+      <select class="form-control" name="occupation" [(ngModel)]="customer.occupation">
+        <option value="">Selecione</option>
         <option *ngFor="let occupation of occupations" [value]="occupation">{{ occupation }}</option>
       </select>
     </div>

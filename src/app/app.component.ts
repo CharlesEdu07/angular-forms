@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 class Customer {
   name: string;
   email: string;
-  occupation: string;
+  occupation: string = '';
 }
 
 @Component({
