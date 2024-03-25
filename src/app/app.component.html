@@ -2,8 +2,14 @@
 
   {{ customer | json }}
   {{ userForm.valid }}
+  <br>
+  {{ userForm.invalid }}
 
-  <form #userForm="ngForm" (ngSubmit)="save(userForm)">
+  <div *ngIf="userForm.invalid" class="alert alert-danger">
+    Preencha todos os campos correntamente
+  </div>
+
+  <form autocomplete="off" #userForm="ngForm" (ngSubmit)="save(userForm)">
     <div class="form-group">
       <label for="name" class="form-control-label">Nome</label>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.name" required minlength="10">
