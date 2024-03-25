@@ -12,7 +12,7 @@
 
     <div class="form-group">
       <label for="occupation" class="form-control-label">Profissão</label>
-      <select id="occupation" class="form-control" name="occupation" ngModel>
+      <select id="occupation" class="form-control" name="occupation" [ngModel]="occupation">
         <option value="">Salecione</option>
         <option *ngFor="let occupation of occupations" [value]="occupation">{{ occupation }}</option>
       </select>

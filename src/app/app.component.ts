@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   occupations = ['Engineer', 'Doctor', 'Designer', 'Artist', 'Teacher'];
 
+  occupation = 'Doctor';
+
   save(form: NgForm) {
     console.log(form);
     console.log(form.value.name);
