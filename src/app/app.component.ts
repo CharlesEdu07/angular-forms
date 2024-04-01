@@ -24,5 +24,7 @@ export class AppComponent {
 
     console.log(form.value);
     console.log(this.customer);
+
+    form.reset({ occupation: '' });
   }
 }
